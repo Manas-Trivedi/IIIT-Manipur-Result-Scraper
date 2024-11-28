@@ -55,7 +55,7 @@ for i in range(int(rollNoMin), int(rollNoMax) + 1):
         cpi_xpath = f'//*[@id="divToPrint"]/div[{latest_sem_div_index}]/center/table/tbody/tr[1]/td/b[2]'
 
         # Extract values
-        name = driver.find_element(By.XPATH, '//*[@id="divToPrint"]/table[1]/tbody/tr[1]/td[2]').text
+        name = driver.find_element(By.XPATH, '//*[@id="divToPrint"]/table[1]/tbody/tr[1]/td[2]').text[2:]
         spi = driver.find_element(By.XPATH, spi_xpath).text[2:]  # Adjust slicing if necessary
         cpi = driver.find_element(By.XPATH, cpi_xpath).text[2:]
 
