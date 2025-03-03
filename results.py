@@ -28,7 +28,7 @@ driver = webdriver.Chrome(service=service)
 for i in range(int(rollNoMin), int(rollNoMax) + 1):
     try:
         # Open the website
-        driver.get("http://14.139.202.226/23batchresult/")
+        driver.get(f"http://14.139.202.226/{rNoYear[2:]}batchresult/")
 
         # Wait for the page to load
         time.sleep(2)
